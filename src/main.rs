@@ -105,7 +105,7 @@ fn translate(tokens: Vec<usize>) -> String{
                     prevop = token;
                 }
                 14 => { // Gotou operation. Sets the program counter to the value of the line under the instruction, skipping that line.
-                    outcode.push("goto ".to_string());
+                    outcode.push("goto label".to_string());
                     linecount += 1;
                     prevop = token;
                 }
